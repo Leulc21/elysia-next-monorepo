@@ -1,0 +1,20 @@
+# node / bun / pnpm
+node_modules
+.pnpm-store
+bun.lockb
+.pnpm-debug.log
+
+# next
+.next
+out
+
+# env
+.env
+.env.local
+
+# build
+dist
+build
+
+# misc
+.DS_Store
