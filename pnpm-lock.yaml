@@ -10,6 +10,9 @@ importers:
 
   apps/api:
     dependencies:
+      '@elysiajs/cors':
+        specifier: ^1.4.0
+        version: 1.4.0(elysia@1.4.19(@sinclair/typebox@0.34.45)(@types/bun@1.3.5)(exact-mirror@0.2.5(@sinclair/typebox@0.34.45))(file-type@21.1.1)(openapi-types@12.1.3)(typescript@5.9.3))
       '@elysiajs/eden':
         specifier: ^1.4.6
         version: 1.4.6(elysia@1.4.19(@sinclair/typebox@0.34.45)(@types/bun@1.3.5)(exact-mirror@0.2.5(@sinclair/typebox@0.34.45))(file-type@21.1.1)(openapi-types@12.1.3)(typescript@5.9.3))
@@ -19,13 +22,13 @@ importers:
       elysia:
         specifier: ^1.4.19
         version: 1.4.19(@sinclair/typebox@0.34.45)(@types/bun@1.3.5)(exact-mirror@0.2.5(@sinclair/typebox@0.34.45))(file-type@21.1.1)(openapi-types@12.1.3)(typescript@5.9.3)
-      typescript:
-        specifier: ^5
-        version: 5.9.3
     devDependencies:
       '@types/bun':
         specifier: latest
         version: 1.3.5
+      typescript:
+        specifier: ^5
+        version: 5.9.3
 
   apps/web:
     dependencies:
@@ -35,6 +38,9 @@ importers:
       '@repo/shared':
         specifier: workspace:*
         version: link:../../packages/shared
+      lucide-react:
+        specifier: ^0.562.0
+        version: 0.562.0(react@19.2.3)
       next:
         specifier: 16.1.1
         version: 16.1.1(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -151,6 +157,11 @@ packages:
 
   '@borewit/text-codec@0.1.1':
     resolution: {integrity: sha512-5L/uBxmjaCIX5h8Z+uu+kA9BQLkc/Wl06UGR5ajNRxu+/XjonB5i8JpgFMrPj3LXTCPA0pv8yxUvbUi+QthGGA==}
+
+  '@elysiajs/cors@1.4.0':
+    resolution: {integrity: sha512-pb0SCzBfFbFSYA/U40HHO7R+YrcXBJXOWgL20eSViK33ol1e20ru2/KUaZYo5IMUn63yaTJI/bQERuQ+77ND8g==}
+    peerDependencies:
+      elysia: '>= 1.4.0'
 
   '@elysiajs/eden@1.4.6':
     resolution: {integrity: sha512-Tsa4NwXEWg/u73vWiYZQ3L5/ecgZSxqiEjYwpS+4qBKXeTZqZKl2hcgHJSVBL+InEDMi35Xugct7qyAXE5oM4Q==}
@@ -1544,6 +1555,11 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  lucide-react@0.562.0:
+    resolution: {integrity: sha512-82hOAu7y0dbVuFfmO4bYF1XEwYk/mEbM5E+b1jgci/udUBEE/R7LF5Ip0CCEmXe8AybRM8L+04eP+LGZeDvkiw==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
@@ -2121,6 +2137,10 @@ snapshots:
       '@babel/helper-validator-identifier': 7.28.5
 
   '@borewit/text-codec@0.1.1': {}
+
+  '@elysiajs/cors@1.4.0(elysia@1.4.19(@sinclair/typebox@0.34.45)(@types/bun@1.3.5)(exact-mirror@0.2.5(@sinclair/typebox@0.34.45))(file-type@21.1.1)(openapi-types@12.1.3)(typescript@5.9.3))':
+    dependencies:
+      elysia: 1.4.19(@sinclair/typebox@0.34.45)(@types/bun@1.3.5)(exact-mirror@0.2.5(@sinclair/typebox@0.34.45))(file-type@21.1.1)(openapi-types@12.1.3)(typescript@5.9.3)
 
   '@elysiajs/eden@1.4.6(elysia@1.4.19(@sinclair/typebox@0.34.45)(@types/bun@1.3.5)(exact-mirror@0.2.5(@sinclair/typebox@0.34.45))(file-type@21.1.1)(openapi-types@12.1.3)(typescript@5.9.3))':
     dependencies:
@@ -3595,6 +3615,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-react@0.562.0(react@19.2.3):
+    dependencies:
+      react: 19.2.3
 
   magic-string@0.30.21:
     dependencies:
